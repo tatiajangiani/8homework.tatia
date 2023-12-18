@@ -1,0 +1,178 @@
+/* exercise 1 */
+.button_first {
+    width: 300px;
+    height: 100px;
+    font-size: 24px;
+    color: white;
+    background-color: purple;
+    border-radius: 20px;
+    border: white;
+    box-shadow: 2px 2px 6px 1px white inset, 4px 4px 6px 1px black;
+    text-shadow: 2px 5px 4px #353535;
+
+}
+
+.button_first:active {
+    box-shadow: 5px 5px 8px 2px black inset, -2px -2px 6px 1px white inset;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+/* exercise 2 */
+.card {
+    margin-top: 40px;
+    width: 440px;
+    height: 550px;
+    padding: 20px 20px;
+    margin-left: 20px;
+    transition-property: box-shadow, border-radius;
+    transition-delay: 1s;
+    transition-timing-function: linear;
+}
+
+.image_ski {
+    width: 400px;
+    height: 450px;
+    margin-bottom: 22px;
+    transition-property: box-shadow, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.text_ski {
+    font-size: 20px;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 10px 10px yellow;
+    border-radius: 20px;
+
+}
+
+.image_ski:hover {
+    border-radius: 20px 20px 0px 0px;
+}
+
+/* exercise 3 */
+.text_text {
+    font-size: 140px;
+    color: red;
+    letter-spacing: 20px;
+    animation-name: textcolor;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textcolor {
+    from {
+        color: red
+    }
+
+    to {
+        color: lightgoldenrodyellow
+    }
+}
+
+/* exercise 4 */
+.spinner {
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.spinner_class {
+    width: 100%;
+    height: 100%;
+    border: 20px solid;
+    border-color: green green yellow red;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
+
+.spinner_class:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+
+}
+
+.spinner_text {
+    font-size: 24px;
+    color: black;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* exercise 5 */
+header{
+    padding: 50px;
+    background-color: green;
+    margin-top: 50px;
+}
+
+ul{
+    justify-content: space-around;
+    display: flex;
+}
+
+.nav{
+    text-shadow: 4px 4px 2px black;
+    font-size: 24px;
+    color: gold;
+    transition: text-shadow 1s ease-out
+}
+
+.one:hover, .two:hover, .three:hover {
+    text-shadow: 0px 0px 5px pink, 0px 0px 25px pink, 0px 0px 50px pink, 0px 0px 75px pink;
+}
+
+/* exercise 6 */
+.loading_container{
+    width: 600px;
+    height: 50px;
+    margin: 50px auto;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.loading_div{
+    height: 100%;
+    border-radius: 50px;
+    animation-name: loading;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.loading_text{
+    position: absolute;
+    font-size: 24px;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes loading {
+    from{
+width: 0%;
+    }
+    to{
+width: 100%;
+background-color: red;
+    }
+}
